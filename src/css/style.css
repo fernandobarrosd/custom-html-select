@@ -1,0 +1,98 @@
+:root {
+    --bg-color: #392467;
+    --primary-color: #5D3587;
+    --second-color: #5D3587;
+    --scrollbar-colors: #7c1fdf #442466;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--white);
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.select-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.select-value {
+    background-color: var(--primary-color);
+    padding: 8px;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    
+}
+
+
+.select-list {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--second-color);
+    width: 100%;
+    
+    scrollbar-color: var(--scrollbar-colors);
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+}
+
+.select-list.visible {
+    display: flex;
+}
+
+
+.select-item {
+    font-size: 13px;
+    word-break: break-all;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.select-item:not(.disabled):hover {
+    background-color:  #7c1fdf;
+}
+
+.select-item.disabled {
+    cursor: default;
+    color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.4);
+
+}

@@ -4,5 +4,13 @@
   "main": "index.js",
   "repository": "https://github.com/fernandobarrosd/custom-html-select.git",
   "author": "Fernando de Barros <fdebarros0910-2004@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "vite",
+    "start": "vite preview",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6"
+  }
 }
